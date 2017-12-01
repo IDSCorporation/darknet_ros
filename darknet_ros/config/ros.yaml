@@ -14,12 +14,12 @@ publishers:
   object_detector:
     topic: /darknet_ros/found_object
     queue_size: 1
-    latch: true
+    latch: false
 
   bounding_boxes:
     topic: /darknet_ros/bounding_boxes
     queue_size: 1
-    latch: true
+    latch: false
 
   detection_image:
     topic: /darknet_ros/detection_image
@@ -28,7 +28,7 @@ publishers:
 
 image_view:
 
-  enable_opencv: true
+  enable_opencv: false
   use_darknet: false
   wait_key_delay: 2
   enable_console_output: true

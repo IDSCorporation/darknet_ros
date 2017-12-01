@@ -217,7 +217,7 @@ void YoloObjectDetector::drawBoxes(cv::Mat &inputFrame, std::vector<RosBox_> &ro
     // draw bounding box of first object found
     cv::Point topLeftCorner = cv::Point(xmin, ymin);
     cv::Point botRightCorner = cv::Point(xmax, ymax);
-    cv::rectangle(inputFrame, topLeftCorner, botRightCorner, rosBoxColor, 2);
+    cv::rectangle(inputFrame, topLeftCorner, botRightCorner, rosBoxColor, 3);
     std::ostringstream probability;
     probability << rosBoxes[i].prob*100;
     cv::putText(inputFrame, objectLabel + " (" + probability.str() + "%)", cv::Point(xmin, ymax+15), cv::FONT_HERSHEY_PLAIN,
